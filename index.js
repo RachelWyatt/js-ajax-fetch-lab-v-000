@@ -21,23 +21,23 @@ function showResults(json) {
   //use this function to display the results from forking via the API
 }
 
-function createIssue() {
+function createIssue(title, body) {
   //use this function to create an issue based on the values input in index.html
   const postData = {
     body: 'Great stuff'
   };
  
-fetch(
-  'https://api.github.com/repos/:your_ghname/:your_repo/commits/:sha/comments',
-  {
-    method: 'POST',
-    body: JSON.stringify(postData),
-    headers: {
-      Authorization: `token ${token}`
+  fetch(
+    'https://api.github.com/repos/:your_ghname/:your_repo/commits/:sha/comments',
+    {
+      method: 'POST',
+      body: JSON.stringify(postData),
+      headers: {
+        Authorization: `token ${token}`
+      }
     }
+  ).then(res => console.log(res));
   }
-).then(res => console.log(res));
-}
 
 function getIssues() {
   //once an issue is submitted, fetch all open issues to see the issues you are creating
