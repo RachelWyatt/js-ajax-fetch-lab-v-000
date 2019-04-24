@@ -42,4 +42,14 @@ function createIssue(title, body) {
 
 function getIssues() {
   //once an issue is submitted, fetch all open issues to see the issues you are creating
+    fetch(url, {
+    method: 'GET',
+    mode: 'cors',
+    headers: {
+      Authorization: `token ${getToken()}`
+    }
+  }).then((response) => {
+    return response.json()
+  }).then(showIssues)
+}
 }
