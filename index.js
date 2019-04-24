@@ -24,11 +24,12 @@ function showResults(json) {
 function createIssue(title, body) {
   //use this function to create an issue based on the values input in index.html
   const postData = {
-    body: 'Great stuff'
+    title: title
+    body: body
   };
  
   fetch(
-    'https://api.github.com/repos/:your_ghname/:your_repo/commits/:sha/comments',
+    'https://github.com/RachelWyatt/js-ajax-fetch-lab-v-000/issues',
     {
       method: 'POST',
       body: JSON.stringify(postData),
