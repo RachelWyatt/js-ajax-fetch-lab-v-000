@@ -24,8 +24,8 @@ function showResults(json) {
 function createIssue(title, body) {
   //use this function to create an issue based on the values input in index.html
   const postData = {
-    title: title
-    body: body
+    const issueTitle = document.getElementById('title').value
+    const issueBody = document.getElementById('body').value
   };
  
   fetch(
