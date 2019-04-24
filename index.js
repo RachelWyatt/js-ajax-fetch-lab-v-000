@@ -42,7 +42,7 @@ function createIssue(title, body) {
 
 function getIssues() {
   //once an issue is submitted, fetch all open issues to see the issues you are creating
-    fetch(url, {
+    fetch(https://github.com/RachelWyatt/js-ajax-fetch-lab-v-000/issues) {
     method: 'GET',
     mode: 'cors',
     headers: {
