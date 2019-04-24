@@ -18,7 +18,11 @@ function forkRepo() {
 }
 
 function showResults(json) {
-  //use this function to display the results from forking via the API
+    let $results = document.getElementById('results')
+  let context = json
+
+  let html = handlebarsSetup().repo(context)
+  $results.innerHTML = html
 }
 
 function createIssue(title, body) {
