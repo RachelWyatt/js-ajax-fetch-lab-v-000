@@ -23,6 +23,20 @@ function showResults(json) {
 
 function createIssue() {
   //use this function to create an issue based on the values input in index.html
+  const postData = {
+    body: 'Great stuff'
+  };
+ 
+fetch(
+  'https://api.github.com/repos/:your_ghname/:your_repo/commits/:sha/comments',
+  {
+    method: 'POST',
+    body: JSON.stringify(postData),
+    headers: {
+      Authorization: `token ${token}`
+    }
+  }
+).then(res => console.log(res));
 }
 
 function getIssues() {
